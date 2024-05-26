@@ -1,6 +1,4 @@
 # Byte-compiled / optimized / DDL file 
 
 __pycash__/ 
-*.py[cod]
-*.py.class 
 *.sqlite3
