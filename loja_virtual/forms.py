@@ -11,7 +11,7 @@ class ContactForm(forms.Form):
         )
     )
     email = forms.EmailField(
-        error_messages={'required': 'Digite um e-mail válido'},
+        error_messages={'invalid': 'Digite um e-mail válido!'},
 
         widget=forms.EmailInput(
             attrs={
@@ -30,3 +30,20 @@ class ContactForm(forms.Form):
             }
         )
     )
+    
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if not "gmail.com" in email:
+            raise forms.ValidationError("O Email deve ser do gmail.com") 
+        return email 
+    
+    #def clean_email(self):
+    #    if self.is_valid():
+    #        email = self.cleaned_data['email']
+    #        if not "gmail.com" in email:
+    #            raise forms.ValidationError("O Email deve ser do gmail.com") 
+    #        return email
+    #    return None  # Ou retorne outro valor caso o formulário não seja válido
+
+    
+    

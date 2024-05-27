@@ -1,3 +1,4 @@
+from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render 
 from .forms import ContactForm
@@ -27,7 +28,14 @@ def contact_page(request):
         "title": "Pagina de contatos",
         "content": "Seja Bem a Pagina de contatos",
         "form": contact_form
-    }
-    if request.method == "POST":
-        print(request.POST)
+    } 
+        
+    if contact_form.is_valid():
+        print(contact_form.cleaned_data)
+    
+    #if request.method == "POST":
+    #    print(request.POST)
+    #    print(request.POST.get('Nome_Completo'))
+    #    print(request.POST.get('Email'))
+    #    print(request.POST.get('Content'))
     return render(request, "contact/view.html", context)
