@@ -19,14 +19,17 @@
                 <div class="col">
                     <p>{{content}}</p>
                     <div class="col-sm-6 col-12">
-                        <form method="POST">{% csrf token %}
-                            <input type="text" class="form-control"
-                                placeholder="Nome"
-                                value="Digite o seu nome Completo">
-                            <input type="email" class="form-control"
-                                placeholder="E-mail"
-                                value="Digite o seu e-mail">
-                            <textarea type="content" class="form-control"
+                        <form method="POST">{% csrf_token %}
+                            <input type="text"
+                                class="form-control"
+                                name="fullname"
+                                placeholder="Nome">
+                            <input type="email"
+                                class="form-control"
+                                name="email"
+                                placeholder="E-mail">
+                            <textarea type="content"
+                                class="form-control"
                                 placeholder="Digite o seu texto aqui"></textarea>
                             <button type="submit"
                                 class="bnt bnt-default">Enviar</button>
