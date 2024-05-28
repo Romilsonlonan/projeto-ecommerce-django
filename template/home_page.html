@@ -18,7 +18,14 @@
             <h1>{{title}}</h1>
             <p>{{content}}</p>
         </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'img/logo.png' %}"
+                        class="img-responsive">
+                </div>
+            </div>
+        </div>
         {% if request.user.is.authenticated %}
         <div class="row">
             <div class="col">
