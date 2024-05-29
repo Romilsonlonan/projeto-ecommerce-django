@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -12,6 +13,7 @@
         <link
             href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
     </head>
     <body>
         <div class="text-center">
@@ -21,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="{% static 'img/logo.png' %}"
+                    <img src="{% static 'img/lojavirtual.png' %}"
                         class="img-responsive">
                 </div>
             </div>
