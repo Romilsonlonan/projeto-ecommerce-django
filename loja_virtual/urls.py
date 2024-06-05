@@ -13,7 +13,7 @@ urlpatterns = [
     path('login/', login_page),
     path('register/', register_page),
     path('products/', ProductListView.as_view()),
-    path('products-fbv/', product_list_view()),
+    path('products-fbv/', product_list_view),
 ]
 
 if settings.DEBUG: 
