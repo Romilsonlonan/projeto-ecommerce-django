@@ -2,6 +2,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+# Visão baseada em classe{CBV - ex: ProductListView}
+# Visão baseada em função{FBV - ex: productlistview}
 from products.views import ProductListView, product_list_view, ProductDetailView, product_detail_view
 from .views import home_page, about_page, contact_page, login_page, register_page
 
