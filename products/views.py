@@ -6,6 +6,7 @@ class ProductListView(ListView):
     
     # Traz todos os produtos do banco de dados sem filtrar nada 
     queryset = Product.objects.all() 
+    template_name = "products/list.html"
     
 # Função Based View    
 def product_list_view(request):
